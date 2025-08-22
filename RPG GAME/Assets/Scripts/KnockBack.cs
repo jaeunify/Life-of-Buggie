@@ -29,7 +29,7 @@ public class KnockBack : MonoBehaviour
     private IEnumerator KnockCo(Rigidbody2D enemy){
         if(enemy != null){
             yield return new WaitForSeconds(knockTime);
-            enemy.velocity = Vector2.zero;
+            enemy.linearVelocity = Vector2.zero;
             enemy.GetComponent<Enemy>().currentState = EnemyState.idle;
         }
     }
